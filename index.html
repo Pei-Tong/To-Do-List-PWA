@@ -7,6 +7,20 @@
     <title>Checklist App</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="manifest" href="manifest.json" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-H6T9004S1W"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-H6T9004S1W");
+    </script>
   </head>
   <body>
     <h1>My To-Do List</h1>
@@ -19,7 +33,7 @@
     <script>
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker
-          .register("service-worker.js", {
+          .register("/To-Do-List-PWA/service-worker.js", {
             scope: "/To-Do-List-PWA/",
           })
           .then((reg) => console.log("Service Worker Registered"))
