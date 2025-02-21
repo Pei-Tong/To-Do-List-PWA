@@ -1,6 +1,6 @@
-const taskInput = document.getElementByIdById("taskInput");
-const addTaskBtn = document.getElementByIdById("addTaskBtn");
-const taskList = document.getElementByIdById("taskList");
+const taskInput = document.getElementById("taskInput");
+const addTaskBtn = document.getElementById("addTaskBtn");
+const taskList = document.getElementById("taskList");
 
 // Add Task
 addTaskBtn.addEventListener("click", () => {
