@@ -165,13 +165,13 @@ taskList.addEventListener("keypress", async function(e) {
 
 
 // Chatbot - Rule-based chatbot
-function ruleChatBot(request) {
+async function ruleChatBot(request) {
   if (request.startsWith("add task")) {
     let task = request.replace("add task", "").trim();
     if (task) {
-      addTaskToFirestore(task);
+      await addTaskToFirestore(task);
       appendMessage('Task ' + task + ' added!');
-      renderTasks();
+      await renderTasks();
     } else {
       appendMessage("Please specify a task to add.");
     }
@@ -179,17 +179,19 @@ function ruleChatBot(request) {
   } else if (request.startsWith("complete")) {
     let taskName = request.replace("complete", "").trim();
     if (taskName) {
-      if (removeFromTaskName(taskName)) {
+      const found = await removeFromTaskName(taskName);
+      if (found) {
         appendMessage('Task ' + taskName + ' marked as complete.');
-        renderTasks();
+        await renderTasks();
       } else {
         appendMessage("Task not found!");
       }
+    } else {
+      appendMessage("Please specify a task to complete.");
     }
-  } else {
-    appendMessage("Please specify a task to complete.");
+    return true;
   }
-  return true;
+  return false;
 }
 
 
@@ -198,7 +200,7 @@ aiButton.addEventListener('click', async () => {
   let prompt = aiInput.value.trim().toLowerCase();
   if (prompt) {
     try {
-      if (!ruleChatBot(prompt)) {
+      if (!await ruleChatBot(prompt)) {
         const response = await askChatBot(prompt);
         appendMessage(response);
       }
@@ -223,44 +225,29 @@ function appendMessage(message) {
 
 
 // Chatbot - Remove task by name
-function removeFromTaskName(taskName) {
+async function removeFromTaskName(taskName) {
   const tasks = taskList.getElementsByTagName("li");
   let found = false;
+  
   for (let task of tasks) {
     const taskText = task.textContent.trim();
-    // 檢查是否包含 "Task " 前綴，或僅匹配純數字
     if (
-      taskText.toLowerCase() === taskName.toLowerCase() || // 直接匹配
-      taskText.toLowerCase() === `task ${taskName.toLowerCase()}` || // 匹配 "Task 333"
-      taskText.toLowerCase().replace("task ", "") === taskName.toLowerCase() // 移除 "Task " 後匹配
+      taskText.toLowerCase() === taskName.toLowerCase() || 
+      taskText.toLowerCase() === `task ${taskName.toLowerCase()}` || 
+      taskText.toLowerCase().replace("task ", "") === taskName.toLowerCase()
     ) {
-      removeTask(task.id);
-      removeVisualTask(task.id);
-      found = true;
+      try {
+        await deleteDoc(doc(db, "todos", task.id));
+        task.remove();
+        found = true;
+        log.info(`Task '${taskText}' successfully removed`);
+      } catch (error) {
+        log.error("Error removing task:", error);
+        throw error;
+      }
     }
   }
   return found;
-}
-
-async function removeTask(taskId) {
-  const taskRef = doc(db, "todos", taskId);
-  try {
-    await deleteDoc(taskRef);
-    log.info(`Task with id ${taskId} has been deleted from Firestore.`);
-  } catch (error) {
-    log.error("Error removing task: ", error);
-  }
-}
-
-
-function removeVisualTask(taskId) {
-  const taskElement = document.getElementById(taskId);
-  if (taskElement) {
-    taskElement.remove();
-    log.info(`Task with id ${taskId} removed from the visual interface.`);
-  } else {
-    log.warn(`Task with id ${taskId} not found on the page.`);
-  }
 }
 
 
