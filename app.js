@@ -7,10 +7,7 @@ const aiButton = document.getElementById("send-btn");
 const aiInput = document.getElementById("chat-input");
 const chatHistory = document.getElementById("chat-history");
 
-// 初始化 Firebase
-import { initializeApp } from "firebase/app";
-import { getDocs, addDoc, getFirestore, collection, deleteDoc, doc, getDoc } from "firebase/firestore";
-
+// Import loglevel
 import log from "loglevel";
 // Set the log level (trace, debug, info, warn, error)
 log.setLevel("info");
@@ -20,6 +17,11 @@ log.debug("Debugging information");
 log.error("An error occurred");
 
 
+// Initialize Firebase
+import { initializeApp } from "firebase/app";
+import { getDocs, addDoc, getFirestore, collection, deleteDoc, doc, getDoc } from "firebase/firestore";
+
+// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAIG7xk6369LrCe0OIiDoPZHZuMcUikuc4",
   authDomain: "todo-list-a5d26.firebaseapp.com",
@@ -30,28 +32,8 @@ const firebaseConfig = {
   measurementId: "G-EM5RQTDPS8"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-
-
-import { GoogleGenerativeAI } from '@google/generative-ai';
-
-let apiKey, genAI, model;
-
-
-// Call in the event listener for page load
-async function getApiKey() {
-  let snapshot = await getDoc(doc(db, "apikey", "googlegenai"));
-  apiKey = snapshot.data().key;
-  genAI = new GoogleGenerativeAI(apiKey);
-  model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-}
-
-async function askChatBot(request) {
-  return await model.generateContent(request);
-}
-
 
 
 // Service Worker 註冊
@@ -71,14 +53,36 @@ if ('serviceWorker' in navigator) {
     );
 }
 
-taskInput.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    addTaskBtn.click();
-  }
-});
+
+// Import Google Generative AI
+import { GoogleGenerativeAI } from '@google/generative-ai';
+
+let apiKey, genAI, model;
 
 
-// Add Task
+// Call the gemini model
+async function getApiKey() {
+  let snapshot = await getDoc(doc(db, "apikey", "googlegenai"));
+  apiKey = snapshot.data().key;
+  genAI = new GoogleGenerativeAI(apiKey);
+  model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+}
+
+// Call the function to get the API key
+async function askChatBot(request) {
+  return await model.generateContent(request);
+}
+
+
+// Sanitize Input
+function sanitizeInput(input) {
+  const div = document.createElement("div");
+  div.textContent = input;
+  return div.innerHTML;
+}
+
+
+// Add Task on Click
 addTaskBtn.addEventListener("click", async () => {
   const task = taskInput.value.trim();
   if (task) {
@@ -101,6 +105,14 @@ addTaskBtn.addEventListener("click", async () => {
   }
 });
 
+// Add Task on Enter
+taskInput.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    addTaskBtn.click();
+  }
+});
+
+// Add Task to Firestore
 async function addTaskToFirestore(taskText) {
   await addDoc(collection(db, "todos"), {
     text: taskText,
@@ -108,18 +120,18 @@ async function addTaskToFirestore(taskText) {
   });
 }
 
+
 // Remove task on Click
 taskList.addEventListener("click", async (e) => {
   if (e.target.tagName === 'LI') {
     await deleteDoc(doc(db, "todos", e.target.id), {
-      completed: true
     });
     e.target.remove();
     renderTasks();
   }
 });
 
-
+// Remove task on Enter
 taskList.addEventListener("keypress", async function(e) {
   if (e.target.tagName === 'LI' && e.key === "Enter") {
     await deleteDoc(doc(db, "todos", e.target.id), {
@@ -131,71 +143,16 @@ taskList.addEventListener("keypress", async function(e) {
 
 
 
-async function renderTasks() {
-  var tasks = await getTasksFromFirestore();
-  taskList.innerHTML = "";
-  
-  tasks.forEach((task) => {
-    if (!task.data().completed) {
-      const taskItem = document.createElement("li");
-      taskItem.id = task.id;
-      taskItem.tabIndex = 0;
-      taskItem.textContent = task.data().text;
-      taskList.appendChild(taskItem);
-    }
-  });
-}
-
-async function getTasksFromFirestore() {
-  var data = await getDocs(collection(db, "todos"));
-  let userData = [];
-  
-  data.forEach((doc) => {
-    userData.push(doc);
-  });
-  
-  return userData;
-}
-
-
-// Sanitize Input
-function sanitizeInput(input) {
-  const div = document.createElement("div");
-  div.textContent = input;
-  return div.innerHTML;
-}
 
 
 
-async function removeTask(taskId) {
-  // 使用 Firestore 的 API 刪除任務
-  const taskRef = doc(db, "todos", taskId);  // 根據 taskId 找到對應的 Firestore 文檔
-  try {
-    await deleteDoc(taskRef);  // 刪除文檔
-    log.info(`Task with id ${taskId} has been deleted from Firestore.`);
-  } catch (error) {
-    log.error("Error removing task: ", error);
-  }
-}
 
-
-function removeVisualTask(taskId) {
-  // 根據 taskId 查找 DOM 中對應的任務元素
-  const taskElement = document.getElementById(taskId);  // 假設每個任務的 id 是一個唯一的 taskId
-  if (taskElement) {
-    taskElement.remove();  // 從頁面中移除該任務
-    log.info(`Task with id ${taskId} removed from the visual interface.`);
-  } else {
-    log.warn(`Task with id ${taskId} not found on the page.`);
-  }
-}
-
-
+// Chatbot - Rule-based chatbot
 function ruleChatBot(request) {
   if (request.startsWith("add task")) {
     let task = request.replace("add task", "").trim();
     if (task) {
-      addTask(task);
+      addTaskToFirestore(task);
       appendMessage('Task ' + task + ' added!');
     } else {
       appendMessage("Please specify a task to add.");
@@ -217,6 +174,7 @@ function ruleChatBot(request) {
 }
 
 
+// Chatbot - Send button click event
 aiButton.addEventListener('click', async () => {
   let prompt = aiInput.value.trim().toLowerCase();
   if (prompt) {
@@ -229,6 +187,7 @@ aiButton.addEventListener('click', async () => {
 });
 
 
+// Chatbot - Add message to chat history
 function appendMessage(message) {
   let history = document.createElement("div");
   history.textContent = message;
@@ -237,6 +196,8 @@ function appendMessage(message) {
   aiInput.value = "";
 }
 
+
+// Chatbot - Remove task by name
 function removeFromTaskName(task) {
   let ele = document.getElementsByName(task);
   if (ele.length == 0) {
@@ -250,4 +211,34 @@ function removeFromTaskName(task) {
 }
 
 
+
+
+// Get Tasks from Firestore
+async function getTasksFromFirestore() {
+  var data = await getDocs(collection(db, "todos"));
+  let userData = [];
+  
+  data.forEach((doc) => {
+    userData.push(doc);
+  });
+  
+  return userData;
+}
+
+
+// Render Tasks
+async function renderTasks() {
+  var tasks = await getTasksFromFirestore();
+  taskList.innerHTML = "";
+  
+  tasks.forEach((task) => {
+    if (!task.data().completed) {
+      const taskItem = document.createElement("li");
+      taskItem.id = task.id;
+      taskItem.tabIndex = 0;
+      taskItem.textContent = task.data().text;
+      taskList.appendChild(taskItem);
+    }
+  });
+}
 
