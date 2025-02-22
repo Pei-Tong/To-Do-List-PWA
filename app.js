@@ -237,22 +237,6 @@ function removeFromTaskName(taskName) {
 }
 
 
-function removeFromTaskName(taskName) {
-  const tasks = taskList.getElementsByTagName("li");
-  let found = false;
-  for (let task of tasks) {
-    if (task.textContent.trim() === taskName) {
-      removeTask(task.id);
-      removeVisualTask(task.id);
-      found = true;
-    }
-  }
-  return found;
-}
-
-
-
-
 
 
 // Render Tasks
