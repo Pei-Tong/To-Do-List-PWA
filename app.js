@@ -1,29 +1,21 @@
+// 頁面元素選取
 const taskInput = document.getElementById("taskInput");
 const addTaskBtn = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
 
-// Add Task
-addTaskBtn.addEventListener("click", () => {
-  const task = taskInput.value.trim();
-  if (task) {
-    const li = document.createElement("li");
-    li.textContent = task;
-    taskList.appendChild(li);
-    taskInput.value = " ";
-  }
-});
 
-// Remove task on Click
-taskList.addEventListener("click", (e) => {
-  if (e.target.tagName === "LI") {
-    e.target.remove();
-  }
-});
-
-
-// Import the functions you need from the SDKs you need
+// 初始化 Firebase
 import { initializeApp } from "firebase/app";
 import { doc, getDocs, addDoc, updateDoc, getFirestore, collection } from "firebase/firestore";
+
+import log from "loglevel";
+// Set the log level (trace, debug, info, warn, error)
+log.setLevel("info");
+// Example logs
+log.info("Application started");
+log.debug("Debugging information");
+log.error("An error occurred");
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyAIG7xk6369LrCe0OIiDoPZHZuMcUikuc4",
@@ -40,13 +32,14 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 
-const sw = new URL('/To-Do-List-PWA/service-worker.js', import.meta.url);
+// Service Worker 註冊
+const sw = new URL('./service-worker.js', import.meta.url);
 
 if ('serviceWorker' in navigator) {
   const s = navigator.serviceWorker;
 
   s.register(sw.href, {
-    scope: '/',
+    scope: '/To-Do-List-PWA/',
   })
     .then(() => 
       console.log('Service Worker Registered for scope:', sw.href, 'with', import.meta.url)
@@ -55,3 +48,77 @@ if ('serviceWorker' in navigator) {
       console.error('Service Worker Error:', err)
     );
 }
+
+
+// Add Task
+addTaskBtn.addEventListener("click", async () => {
+  const task = taskInput.value.trim();
+  if (task) {
+    const taskText = sanitizeInput(taskInput.value.trim());
+
+    if (taskText) {
+      try {
+        // Log user action
+        log.info(`Task added: ${taskText}`);
+        await addTaskToFirestore(taskText);
+        renderTasks();
+        taskInput.value = "";
+      } catch (error) {
+        // Log error
+        log.error("Error adding task", error);
+      }
+    }
+  }
+});
+
+async function addTaskToFirestore(taskText) {
+  await addDoc(collection(db, "todos"), {
+    text: taskText,
+    completed: false
+  });
+}
+
+async function renderTasks() {
+  var tasks = await getTasksFromFirestore();
+  taskList.innerHTML = "";
+  
+  tasks.forEach((task, index) => {
+    if (!task.data().completed) {
+      const taskItem = document.createElement("li");
+      taskItem.id = task.id;
+      taskItem.textContent = task.data().text;
+      taskList.appendChild(taskItem);
+    }
+  });
+}
+
+async function getTasksFromFirestore() {
+  var data = await getDocs(collection(db, "todos"));
+  let userData = [];
+  
+  data.forEach((doc) => {
+    userData.push(doc);
+  });
+  
+  return userData;
+}
+
+
+// Sanitize Input
+function sanitizeInput(input) {
+  const div = document.createElement("div");
+  div.textContent = input;
+  return div.innerHTML;
+}
+
+
+
+// Remove task on Click
+taskList.addEventListener("click", (e) => {
+  if (e.target.tagName === "LI") {
+    e.target.remove();
+  }
+});
+
+
+
