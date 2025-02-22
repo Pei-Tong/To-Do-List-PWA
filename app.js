@@ -49,6 +49,12 @@ if ('serviceWorker' in navigator) {
     );
 }
 
+taskInput.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    addTaskBtn.click();
+  }
+});
+
 
 // Add Task
 addTaskBtn.addEventListener("click", async () => {
@@ -68,7 +74,10 @@ addTaskBtn.addEventListener("click", async () => {
         log.error("Error adding task", error);
       }
     }
+  } else {
+    alert("Please enter a task");
   }
+
 });
 
 async function addTaskToFirestore(taskText) {
@@ -78,6 +87,29 @@ async function addTaskToFirestore(taskText) {
   });
 }
 
+// Remove task on Click
+taskList.addEventListener("click", async (e) => {
+  if (e.target.tagName === 'LI') {
+    await updateDoc(doc(db, "todos", e.target.id), {
+      completed: true
+    });
+    e.target.remove();
+    renderTasks();
+  }
+});
+
+
+taskList.addEventListener("keypress", async function(e) {
+  if (e.target.tagName === 'LI' && e.key === "Enter") {
+    await updateDoc(doc(db, "todos", e.target.id), {
+      completed: true
+    });
+    renderTasks();
+  }
+});
+
+
+
 async function renderTasks() {
   var tasks = await getTasksFromFirestore();
   taskList.innerHTML = "";
@@ -86,6 +118,7 @@ async function renderTasks() {
     if (!task.data().completed) {
       const taskItem = document.createElement("li");
       taskItem.id = task.id;
+      taskItem.tabIndex = 0;
       taskItem.textContent = task.data().text;
       taskList.appendChild(taskItem);
     }
@@ -112,13 +145,6 @@ function sanitizeInput(input) {
 }
 
 
-
-// Remove task on Click
-taskList.addEventListener("click", (e) => {
-  if (e.target.tagName === "LI") {
-    e.target.remove();
-  }
-});
 
 
 
