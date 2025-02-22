@@ -1,4 +1,4 @@
-22329
+22330
 104C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\term-size\vendor\macos\term-size133846717464142105 0
 66C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\.github133846711136936503 1
 107C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\eslint\lib\config\default-config.js133847094964156554 0
@@ -10,21 +10,6 @@
 115C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\messaging\dist\esm\compat\database133846717286894934 1
 114C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@firebase\auth-compat\dist\auth-compat\src133846717264367784 1
 93C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\uuid\dist\cjs\v7.d.ts133846717344173022 0
-127C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\compat\app-check\dist\esm\messaging\index.d.ts133846717274879740 0
-80C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\htmlnano133846717469810062 1
-108C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@swc\helpers\_\_ts_dispose_resources133846717475783791 1
-147C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@firebase\firestore\dist\firestore\test\unit\local\test_mutation_queue.d.ts133846717272419446 0
-102C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\web-vitals\src\lib\onHidden.ts133846717265012889 0
-122C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\parcel\node_modules\commander\package-support.json133846717481905342 0
-128C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\google-auth-library\build\src\auth\awsrequestsigner.d.ts133846717342248312 0
-95C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\node-forge\CHANGELOG.md133846717342969683 0
-97C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\tslib\CopyrightNotice.txt133846717261162279 0
-84C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@tootallnate133846717336082098 1
-105C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\public-encrypt\test\rsa.pass.priv133847094963444936 0
-90C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\nullthrows\LICENSE133846717465872794 0
-72C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\.eslintignore133847103166058143 0
-110C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@swc\helpers\esm\_wrap_native_super.js133846717473882756 0
-112C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\elliptic\node_modules\bn.js\package.json133847094962047769 0
 107C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\is-generator-function\test\index.js133847094956511804 0
 119C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@swc\helpers\src\_class_private_method_init.mjs133846717476433840 0
 102C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@parcel\core\src\Validation.js133846717483996336 0
@@ -35,7 +20,7 @@
 136C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase-admin\lib\messaging\messaging-api-request-internal.d.ts133846717345093927 0
 97C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\yargs\locales\pirate.json133846717263397719 0
 124C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\vertexai\dist\esm\firestore\lite\index.d.ts133846717290945520 0
-65C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\app.js133847109947352323 0
+65C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\app.js133847138359723968 0
 120C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\google-gax\build\src\streamingCalls\streaming.js133846717342338347 0
 90C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\yargs\package.json133846717262712605 0
 121C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@parcel\runtime-js\src\helpers\node\css-loader.js133846717473611974 0
@@ -47,6 +32,8 @@
 100C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\cosmiconfig\dist\readFile.js133846717463972094 0
 95C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\web-vitals\src\onCLS.ts133846717264912893 0
 69C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\.gitignore133847103198960272 0
+72C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\manifest.json133846710526695571 0
+154C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\google-gax\node_modules\@grpc\grpc-js\src\generated\google\protobuf\UInt64Value.ts133846717347002867 0
 107C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\vm-browserify\example\run\server.js133847094960265445 0
 98C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\msgpackr\dist\index.min.js133846717465742372 0
 104C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@swc\helpers\_\_jsx\package.json133846717475308682 0
@@ -56,7 +43,7 @@
 93C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\jose\dist\browser\jws133846717344953914 1
 81C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\uuid\dist133846717340128050 1
 121C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\auth\cordova\dist\compat\index.perf.d.ts133846717291940726 0
-63C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs133847120836714495 1
+63C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs133847138966509875 1
 109C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase-admin\lib\functions\index.js133846717343149691 0
 124C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\posthtml\node_modules\htmlparser2\lib\Tokenizer.d.ts133846717481995341 0
 99C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\app-check\dist\esm133846717271349240 1
@@ -93,7 +80,7 @@
 135C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@google-cloud\storage\node_modules\uuid\dist\esm-browser\v35.js133846717342008310 0
 104C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\eslint\lib\rules\semi-spacing.js133847094966745147 0
 117C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase-admin\lib\app-check\app-check-api.js133846717340613168 0
-75C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\eslint.config.js133847103959217052 0
+75C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\eslint.config.js133847138839581333 0
 132C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\google-gax\node_modules\uuid\dist\commonjs-browser\native.js133846717340943190 0
 76C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\y18n133846717260872275 1
 120C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\compat\storage\dist\esm\compat\database133846717282508281 1
@@ -119,6 +106,8 @@
 112C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\node-gyp-build-optional-packages\LICENSE133846717462271793 0
 93C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\espree\lib\version.js133847094958827320 0
 116C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@opentelemetry\api\build\esm\trace\link.d.ts133846717347448028 0
+127C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\messaging\dist\esm\compat\app-check\index.d.ts133846717286864936 0
+103C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\which-typed-array\.editorconfig133847094954482092 0
 99C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\utility-types\dist\index.js133846717463592106 0
 99C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\to-regex-range\package.json133846717376601202 0
 125C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\auth\cordova\dist\esm\compat\auth\index.d.ts133846717272374356 0
@@ -164,8 +153,6 @@
 130C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@google-cloud\firestore\build\src\reference\constants.d.ts133846717344343137 0
 84C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\jsonwebtoken133846717340973192 1
 114C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@parcel\transformer-babel\src\constants.js133846717473256869 0
-72C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\manifest.json133846710526695571 0
-154C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\google-gax\node_modules\@grpc\grpc-js\src\generated\google\protobuf\UInt64Value.ts133846717347002867 0
 100C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\firestore\lite\dist133846717285234606 1
 122C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\intro.doc133846717470080065 0
 126C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\compat\messaging\dist\auth\cordova\index.d.ts133846717280488014 0
@@ -200,7 +187,7 @@
 90C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\.package-lock.json133847120771131712 0
 112C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\compat\functions\dist\index.mjs133846717268348438 0
 104C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\jose\dist\types\jwks\remote.d.ts133846717346029099 0
-71C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\package.json133847117174428075 0
+71C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\package.json133847132260045240 0
 68C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\style.css133846710526705582 0
 118C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\compat\performance\dist\remote-config133846717281573119 1
 118C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\teeny-request\build\src\TeenyStatistics.js.map133846717340453168 0
@@ -457,6 +444,16 @@
 112C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\performance\dist\firestore\lite133846717288485254 1
 83C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@protobufjs133846717256680537 1
 116C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\eslint\node_modules\glob-parent\package.json133847094955143448 0
+127C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\compat\app-check\dist\esm\messaging\index.d.ts133846717274879740 0
+80C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\htmlnano133846717469810062 1
+108C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@swc\helpers\_\_ts_dispose_resources133846717475783791 1
+147C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@firebase\firestore\dist\firestore\test\unit\local\test_mutation_queue.d.ts133846717272419446 0
+102C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\web-vitals\src\lib\onHidden.ts133846717265012889 0
+122C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\parcel\node_modules\commander\package-support.json133846717481905342 0
+128C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\google-auth-library\build\src\auth\awsrequestsigner.d.ts133846717342248312 0
+95C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\node-forge\CHANGELOG.md133846717342969683 0
+97C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\tslib\CopyrightNotice.txt133846717261162279 0
+84C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@tootallnate133846717336082098 1
 91C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\react-error-overlay133846717464517234 1
 105C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\compat\app\dist\esm\auth133846717275279791 1
 106C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\storage\dist\esm\vertexai133846717290310442 1
@@ -569,6 +566,9 @@
 95C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\flat-cache\package.json133847094955614820 0
 90C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\isexe\package.json133847094954492335 0
 77C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\async133846717378681483 1
+92C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\websocket-driver\lib133846717260077116 1
+132C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\google-gax\node_modules\@grpc\grpc-js\src\subchannel-pool.ts133846717346902865 0
+86C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\browserify-des133847094959643252 1
 95C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\uuid\dist\cjs\native.js133846717341163178 0
 113C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\html-entities\lib\named-references.js.map133846717340703167 0
 102C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\eslint\lib\rules\jsx-quotes.js133847094964855370 0
@@ -614,9 +614,6 @@
 123C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\google-gax\build\protos\google\type\timeofday.proto133846717345749081 0
 123C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\teeny-request\node_modules\uuid\dist\esm-node\v1.js133846717341998312 0
 79C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\brorand133847094956426674 1
-92C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\websocket-driver\lib133846717260077116 1
-132C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\google-gax\node_modules\@grpc\grpc-js\src\subchannel-pool.ts133846717346902865 0
-86C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\browserify-des133847094959643252 1
 137C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@firebase\storage\dist\node-esm\src\implementation\constants.d.ts133846717264287783 0
 132C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\compat\analytics\dist\esm\compat\storage\index.d.ts133846717274214609 0
 127C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\compat\storage\dist\compat\database\index.d.ts133846717282283180 0
@@ -2824,8 +2821,6 @@
 106C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\htmlnano\lib\modules\minifyCss.cjs133846717465492393 0
 89C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\word-wrap\LICENSE133847094954502316 0
 121C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@opentelemetry\api\build\esnext\trace\span.js.map133846717346662880 0
-127C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\messaging\dist\esm\compat\app-check\index.d.ts133846717286864936 0
-103C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\which-typed-array\.editorconfig133847094954482092 0
 99C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\which-typed-array\.eslintrc133847094954787863 0
 145C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@firebase\firestore\dist\firestore\test\unit\local\test_bundle_cache.d.ts133846717272364361 0
 94C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\jose\dist\node\cjs\jwk133846717345233929 1
@@ -3750,18 +3745,18 @@
 111C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\auth\dist\messaging\index.d.ts133846717273269533 0
 94C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase-admin\LICENSE133846717338877511 0
 91C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\uuid\dist\esm\v5.js133846717342789677 0
+93C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\uuid\dist\esm\v6.d.ts133846717344097567 0
+116C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\analytics\dist\esm\compat\functions133846717270549189 1
+123C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@opentelemetry\api\build\src\trace\SpanOptions.d.ts133846717347888016 0
+131C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\firestore\dist\esm\compat\installations\index.d.ts133846717284379490 0
+127C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@firebase\auth\dist\node\src\platform_browser\providers133846717275384843 1
+117C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\posthtml\node_modules\domutils\lib\feeds.d.ts133846717464192109 0
+112C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\performance\dist\app\index.d.ts133846717287900074 0
 84C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\util\support133847094958827320 1
 118C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\firestore\lite\dist\compat\index.d.ts133846717284784585 0
 135C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@opentelemetry\api\build\esm\platform\browser\globalThis.js.map133846717345909076 0
 91C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@swc\helpers\_\_jsx133846717475308682 1
 95C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\type-check\lib\check.js133847094954867984 0
-127C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@firebase\auth\dist\node\src\platform_browser\providers133846717275384843 1
-117C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\posthtml\node_modules\domutils\lib\feeds.d.ts133846717464192109 0
-112C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\performance\dist\app\index.d.ts133846717287900074 0
-93C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\uuid\dist\esm\v6.d.ts133846717344097567 0
-116C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\analytics\dist\esm\compat\functions133846717270549189 1
-123C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@opentelemetry\api\build\src\trace\SpanOptions.d.ts133846717347888016 0
-131C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\firestore\dist\esm\compat\installations\index.d.ts133846717284379490 0
 112C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@firebase\app-compat\dist\src\types.d.ts133846717262562606 0
 149C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@firebase\auth\dist\node-esm\test\integration\webdriver\util\test_runner.d.ts133846717279272177 0
 141C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@firebase\auth\dist\web-extension-esm2017\src\core\util\event_id.d.ts133846717269524030 0
@@ -4556,8 +4551,8 @@
 122C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\htmlnano\lib\modules\removeRedundantAttributes.mjs133846717469199422 0
 96C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@types\node\console.d.ts133846717261142275 0
 100C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\timsort\build\timsort.min.js133846717463542092 0
-88C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\term-size\vendor133846717464182102 1
 96C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\has-tostringtag\index.js133846717340098046 0
+88C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\term-size\vendor133846717464182102 1
 102C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\data-connect\dist\esm133846717283308340 1
 156C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\google-gax\build\protos\google\protobuf\editions\codegen_tests\proto2_unpacked.proto133846717344893932 0
 98C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\term-size\vendor\.DS_Store133846717463892100 0
@@ -5792,6 +5787,8 @@
 113C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\analytics\dist\compat\index.d.ts133846717270364072 0
 107C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\proto3-json-serializer\CHANGELOG.md133846717341528329 0
 104C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\public-encrypt\test\rsa.2028.pub133847094963424951 0
+105C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\public-encrypt\test\rsa.pass.priv133847094963444936 0
+90C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\nullthrows\LICENSE133846717465872794 0
 103C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\jose\dist\node\cjs\lib\epoch.js133846717343727571 0
 120C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@swc\helpers\cjs\_class_private_field_update.cjs133846717465492393 0
 95C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\compat\storage133846717265688056 1
@@ -10439,8 +10436,8 @@
 114C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\compat\remote-config\package.json133846717265678049 0
 135C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@firebase\auth\dist\esm2017\src\core\strategies\email_link.d.ts133846717268493518 0
 113C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\gaxios\node_modules\uuid\dist\esm-browser133846717342529684 1
-110C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\gaxios\node_modules\uuid\dist\esm-node133846717342549704 1
 127C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\compat\installations\dist\firestore\index.d.ts133846717280342917 0
+110C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\gaxios\node_modules\uuid\dist\esm-node133846717342549704 1
 116C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\gaxios\node_modules\uuid\dist\md5-browser.js133846717340513179 0
 111C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\auth\dist\app-check\index.d.ts133846717272699439 0
 99C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\database\dist\auth133846717283459424 1
@@ -10937,6 +10934,7 @@
 124C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\auth\web-extension\dist\database\index.d.ts133846717273494622 0
 113C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase-admin\lib\database\database.d.ts133846717344438288 0
 108C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase-admin\lib\database\index.js133846717342439684 0
+96C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@grpc\proto-loader\build133846717260442268 1
 139C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase-admin\lib\data-connect\data-connect-api-client-internal.js133846717341598318 0
 114C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase-admin\lib\data-connect\index.d.ts133846717344718261 0
 108C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\compat\dist\auth\index.d.ts133846717277645205 0
@@ -15870,6 +15868,8 @@
 93C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\elliptic\package.json133847094963331022 0
 90C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\elliptic\README.md133847094963361046 0
 102C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@nodelib\fs.walk\out\providers133846717377896381 1
+110C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@swc\helpers\esm\_wrap_native_super.js133846717473882756 0
+112C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\elliptic\node_modules\bn.js\package.json133847094962047769 0
 109C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\elliptic\node_modules\bn.js\README.md133847094962350784 0
 97C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\define-properties\LICENSE133847094955394330 0
 120C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\elliptic\node_modules\bn.js\util\genCombMulTo.js133847094961383491 0
@@ -18779,7 +18779,6 @@
 99C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@humanfs\core\dist\hfs.d.ts133847094959974471 0
 101C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@humanfs\core\dist\index.d.ts133847094960773678 0
 100C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@humanfs\core\dist\path.d.ts133847094961395684 0
-96C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@grpc\proto-loader\build133846717260442268 1
 100C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@grpc\proto-loader\README.md133846717261022273 0
 144C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@firebase\auth\dist\web-extension-esm2017\auth-web-extension-public.d.ts133846717267458390 0
 109C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@grpc\proto-loader\build\src\index.js133846717260347181 0
@@ -22318,11 +22317,13 @@
 77C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\icons\icon-128.png133846710526685559 0
 77C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\icons\icon-512.png133846710526695571 0
 85C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\icon-128.445b138c.png133847099157243383 0
+81C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.0a97c4a7.js133847138966274641 0
+85C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.0a97c4a7.js.map133847138966509875 0
 82C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.65dce202.css133847099162968615 0
 86C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.65dce202.css.map133847099163113059 0
 81C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.7fa28c08.js133847099162963402 0
 85C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.7fa28c08.js.map133847099163123416 0
-74C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.html133847120836578708 0
+74C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.html133847138966269463 0
 84C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\manifest.webmanifest133847120836578708 0
 90C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\service-worker.a5fa182b.js133847099162963402 0
 94C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\service-worker.a5fa182b.js.map133847099163113059 0

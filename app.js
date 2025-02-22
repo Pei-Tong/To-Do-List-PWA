@@ -6,7 +6,7 @@ const taskList = document.getElementById("taskList");
 
 // 初始化 Firebase
 import { initializeApp } from "firebase/app";
-import { doc, getDocs, addDoc, updateDoc, getFirestore, collection } from "firebase/firestore";
+import { getDocs, addDoc, getFirestore, collection } from "firebase/firestore";
 
 import log from "loglevel";
 // Set the log level (trace, debug, info, warn, error)
@@ -82,7 +82,7 @@ async function renderTasks() {
   var tasks = await getTasksFromFirestore();
   taskList.innerHTML = "";
   
-  tasks.forEach((task, index) => {
+  tasks.forEach((task) => {
     if (!task.data().completed) {
       const taskItem = document.createElement("li");
       taskItem.id = task.id;
