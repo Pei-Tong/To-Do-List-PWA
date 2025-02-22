@@ -23,7 +23,7 @@ taskList.addEventListener("click", (e) => {
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -41,7 +41,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getAnalytics(app);
+const db = getFirestore(app);
 
 
 const sw = new URL('/To-Do-List-PWA/service-worker.js', import.meta.url);
@@ -50,7 +50,7 @@ if ('serviceWorker' in navigator) {
   const s = navigator.serviceWorker;
 
   s.register(sw.href, {
-    scope: '/To-Do-List-PWA/',
+    scope: '/',
   })
     .then(() => 
       console.log('Service Worker Registered for scope:', sw.href, 'with', import.meta.url)
