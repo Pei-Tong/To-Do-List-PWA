@@ -227,7 +227,13 @@ function removeFromTaskName(taskName) {
   const tasks = taskList.getElementsByTagName("li");
   let found = false;
   for (let task of tasks) {
-    if (task.textContent.trim().toLowerCase() === taskName) {
+    const taskText = task.textContent.trim();
+    // 檢查是否包含 "Task " 前綴，或僅匹配純數字
+    if (
+      taskText.toLowerCase() === taskName.toLowerCase() || // 直接匹配
+      taskText.toLowerCase() === `task ${taskName.toLowerCase()}` || // 匹配 "Task 333"
+      taskText.toLowerCase().replace("task ", "") === taskName.toLowerCase() // 移除 "Task " 後匹配
+    ) {
       removeTask(task.id);
       removeVisualTask(task.id);
       found = true;
@@ -270,7 +276,7 @@ async function renderTasks() {
       const taskItem = document.createElement("li");
       taskItem.id = task.id;
       taskItem.tabIndex = 0;
-      taskItem.textContent = task.data().text;
+      taskItem.textContent = task.data().text.replace("Task ", "");
       taskList.appendChild(taskItem);
     }
   });
