@@ -90,7 +90,7 @@ async function addTaskToFirestore(taskText) {
 // Remove task on Click
 taskList.addEventListener("click", async (e) => {
   if (e.target.tagName === 'LI') {
-    await updateDoc(doc(db, "todos", e.target.id), {
+    await deleteDoc(doc(db, "todos", e.target.id), {
       completed: true
     });
     e.target.remove();
@@ -101,9 +101,10 @@ taskList.addEventListener("click", async (e) => {
 
 taskList.addEventListener("keypress", async function(e) {
   if (e.target.tagName === 'LI' && e.key === "Enter") {
-    await updateDoc(doc(db, "todos", e.target.id), {
+    await deleteDoc(doc(db, "todos", e.target.id), {
       completed: true
     });
+    e.target.remove();
     renderTasks();
   }
 });
