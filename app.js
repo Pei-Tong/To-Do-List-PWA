@@ -6,7 +6,7 @@ const taskList = document.getElementById("taskList");
 
 // 初始化 Firebase
 import { initializeApp } from "firebase/app";
-import { getDocs, addDoc, getFirestore, collection, deleteDoc, doc} from "firebase/firestore";
+import { getDocs, addDoc, getFirestore, collection, deleteDoc, doc, getDoc } from "firebase/firestore";
 
 import log from "loglevel";
 // Set the log level (trace, debug, info, warn, error)
@@ -30,6 +30,22 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+
+
+import { GoogleGenerativeAI } from '@google/generative-ai';
+
+// Call in the event listener for page load
+async function getApiKey() {
+  let snapshot = await getDoc(doc(db, "apikey", "googlegenai"));
+  apiKey = snapshot.data().key;
+  genAI = new GoogleGenerativeAI(apiKey);
+  model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+}
+
+async function askChatBot(request) {
+  return await model.generateContent(request);
+}
+
 
 
 // Service Worker 註冊
@@ -77,7 +93,6 @@ addTaskBtn.addEventListener("click", async () => {
   } else {
     alert("Please enter a task");
   }
-
 });
 
 async function addTaskToFirestore(taskText) {
@@ -102,7 +117,6 @@ taskList.addEventListener("click", async (e) => {
 taskList.addEventListener("keypress", async function(e) {
   if (e.target.tagName === 'LI' && e.key === "Enter") {
     await deleteDoc(doc(db, "todos", e.target.id), {
-      completed: true
     });
     e.target.remove();
     renderTasks();
@@ -147,5 +161,85 @@ function sanitizeInput(input) {
 
 
 
+function ruleChatBot(request) {
+  if (request.startsWith("add task")) {
+    let task = request.replace("add task", "").trim();
+    if (task) {
+      addTask(task);
+      appendMessage('Task ' + task + ' added!');
+    } else {
+      appendMessage("Please specify a task to add.");
+    }
+    return true;
+  } else if (request.startsWith("complete")) {
+    let taskName = request.replace("complete", "").trim();
+    if (taskName) {
+      if (removeFromTaskName(taskName)) {
+        appendMessage('Task ' + taskName + ' marked as complete.');
+      } else {
+        appendMessage("Task not found!");
+      }
+    }
+  } else {
+    appendMessage("Please specify a task to complete.");
+  }
+  return true;
+}
 
+
+aiButton.addEventListener('click', async () => {
+  let prompt = aiInput.value.trim().toLowerCase();
+  if (prompt) {
+    if (!ruleChatBot(prompt)) {
+      askChatBot(prompt);
+    }
+  } else {
+    appendMessage("Please enter a prompt");
+  }
+});
+
+
+function appendMessage(message) {
+  let history = document.createElement("div");
+  history.textContent = message;
+  history.className = 'history';
+  chatHistory.appendChild(history);
+  aiInput.value = "";
+}
+
+function removeFromTaskName(task) {
+  let ele = document.getElementsByName(task);
+  if (ele.length == 0) {
+    return false;
+  }
+  ele.forEach(e => {
+    removeTask(e.id);
+    removeVisualTask(e.id);
+  })
+  return true;
+}
+
+
+async function removeTask(taskId) {
+  // 使用 Firestore 的 API 刪除任務
+  const taskRef = doc(db, "todos", taskId);  // 根據 taskId 找到對應的 Firestore 文檔
+  try {
+    await deleteDoc(taskRef);  // 刪除文檔
+    log.info(`Task with id ${taskId} has been deleted from Firestore.`);
+  } catch (error) {
+    log.error("Error removing task: ", error);
+  }
+}
+
+
+function removeVisualTask(taskId) {
+  // 根據 taskId 查找 DOM 中對應的任務元素
+  const taskElement = document.getElementById(taskId);  // 假設每個任務的 id 是一個唯一的 taskId
+  if (taskElement) {
+    taskElement.remove();  // 從頁面中移除該任務
+    log.info(`Task with id ${taskId} removed from the visual interface.`);
+  } else {
+    log.warn(`Task with id ${taskId} not found on the page.`);
+  }
+}
 
