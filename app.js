@@ -1,3 +1,5 @@
+
+
 // 頁面元素選取
 const taskInput = document.getElementById("taskInput");
 const addTaskBtn = document.getElementById("addTaskBtn");
@@ -36,6 +38,43 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 
+
+
+// Import Google Generative AI
+import { GoogleGenerativeAI } from '@google/generative-ai';
+
+let apiKey, genAI, model;
+
+document.addEventListener("DOMContentLoaded", async () => {
+  await getApiKey();
+  log.info("API Key and Generative AI initialized.");
+});
+
+
+// Call the gemini model
+async function getApiKey() {
+  let snapshot = await getDoc(doc(db, "apikey", "googlegenai"));
+  apiKey = snapshot.data().key;
+  genAI = new GoogleGenerativeAI(apiKey);
+  model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+}
+
+
+// Call the function to get the API key
+async function askChatBot(request) {
+  if (!model) {
+    throw new Error("Generative AI model not initialized. Please wait for page load.");
+  }
+  try {
+    const response = await model.generateContent(request);
+    return response.response.text();
+  } catch (error) {
+    log.error("Error in askChatBot:", error);
+    throw error;
+  }
+}
+
+
 // Service Worker 註冊
 const sw = new URL('./service-worker.js', import.meta.url);
 
@@ -53,25 +92,6 @@ if ('serviceWorker' in navigator) {
     );
 }
 
-
-// Import Google Generative AI
-import { GoogleGenerativeAI } from '@google/generative-ai';
-
-let apiKey, genAI, model;
-
-
-// Call the gemini model
-async function getApiKey() {
-  let snapshot = await getDoc(doc(db, "apikey", "googlegenai"));
-  apiKey = snapshot.data().key;
-  genAI = new GoogleGenerativeAI(apiKey);
-  model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-}
-
-// Call the function to get the API key
-async function askChatBot(request) {
-  return await model.generateContent(request);
-}
 
 
 // Sanitize Input
@@ -144,9 +164,6 @@ taskList.addEventListener("keypress", async function(e) {
 
 
 
-
-
-
 // Chatbot - Rule-based chatbot
 function ruleChatBot(request) {
   if (request.startsWith("add task")) {
@@ -154,6 +171,7 @@ function ruleChatBot(request) {
     if (task) {
       addTaskToFirestore(task);
       appendMessage('Task ' + task + ' added!');
+      renderTasks();
     } else {
       appendMessage("Please specify a task to add.");
     }
@@ -163,6 +181,7 @@ function ruleChatBot(request) {
     if (taskName) {
       if (removeFromTaskName(taskName)) {
         appendMessage('Task ' + taskName + ' marked as complete.');
+        renderTasks();
       } else {
         appendMessage("Task not found!");
       }
@@ -178,8 +197,14 @@ function ruleChatBot(request) {
 aiButton.addEventListener('click', async () => {
   let prompt = aiInput.value.trim().toLowerCase();
   if (prompt) {
-    if (!ruleChatBot(prompt)) {
-      askChatBot(prompt);
+    try {
+      if (!ruleChatBot(prompt)) {
+        const response = await askChatBot(prompt);
+        appendMessage(response);
+      }
+    } catch (error) {
+      log.error("Error processing AI request:", error);
+      appendMessage("Error: Could not process your request.");
     }
   } else {
     appendMessage("Please enter a prompt");
@@ -198,32 +223,36 @@ function appendMessage(message) {
 
 
 // Chatbot - Remove task by name
-function removeFromTaskName(task) {
-  let ele = document.getElementsByName(task);
-  if (ele.length == 0) {
-    return false;
+function removeFromTaskName(taskName) {
+  const tasks = taskList.getElementsByTagName("li");
+  let found = false;
+  for (let task of tasks) {
+    if (task.textContent.trim() === taskName) {
+      removeTask(task.id);
+      removeVisualTask(task.id);
+      found = true;
+    }
   }
-  ele.forEach(e => {
-    removeTask(e.id);
-    removeVisualTask(e.id);
-  })
-  return true;
+  return found;
+}
+
+
+function removeFromTaskName(taskName) {
+  const tasks = taskList.getElementsByTagName("li");
+  let found = false;
+  for (let task of tasks) {
+    if (task.textContent.trim() === taskName) {
+      removeTask(task.id);
+      removeVisualTask(task.id);
+      found = true;
+    }
+  }
+  return found;
 }
 
 
 
 
-// Get Tasks from Firestore
-async function getTasksFromFirestore() {
-  var data = await getDocs(collection(db, "todos"));
-  let userData = [];
-  
-  data.forEach((doc) => {
-    userData.push(doc);
-  });
-  
-  return userData;
-}
 
 
 // Render Tasks
@@ -242,3 +271,14 @@ async function renderTasks() {
   });
 }
 
+// Get Tasks from Firestore
+async function getTasksFromFirestore() {
+  var data = await getDocs(collection(db, "todos"));
+  let userData = [];
+  
+  data.forEach((doc) => {
+    userData.push(doc);
+  });
+  
+  return userData;
+}
