@@ -1,0 +1,2 @@
+const t=["/To-Do-List-PWA/","/To-Do-List-PWA/index.html","/To-Do-List-PWA/style.css","/To-Do-List-PWA/app.js","/To-Do-List-PWA/manifest.json","/To-Do-List-PWA/icons/icon-128.png","/To-Do-List-PWA/icons/icon-512.png"];self.addEventListener("install",s=>{s.waitUntil(caches.open("to-do-pwa-cache-v1").then(s=>s.addAll(t)))}),self.addEventListener("fetch",t=>{t.respondWith(caches.match(t.request).then(s=>s||fetch(t.request)))});
+//# sourceMappingURL=service-worker.a5fa182b.js.map
