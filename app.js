@@ -3,6 +3,9 @@ const taskInput = document.getElementById("taskInput");
 const addTaskBtn = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
 
+const aiButton = document.getElementById("send-btn");
+const aiInput = document.getElementById("chat-input");
+const chatHistory = document.getElementById("chat-history");
 
 // 初始化 Firebase
 import { initializeApp } from "firebase/app";
@@ -33,6 +36,9 @@ const db = getFirestore(app);
 
 
 import { GoogleGenerativeAI } from '@google/generative-ai';
+
+let apiKey, genAI, model;
+
 
 // Call in the event listener for page load
 async function getApiKey() {
@@ -161,6 +167,30 @@ function sanitizeInput(input) {
 
 
 
+async function removeTask(taskId) {
+  // 使用 Firestore 的 API 刪除任務
+  const taskRef = doc(db, "todos", taskId);  // 根據 taskId 找到對應的 Firestore 文檔
+  try {
+    await deleteDoc(taskRef);  // 刪除文檔
+    log.info(`Task with id ${taskId} has been deleted from Firestore.`);
+  } catch (error) {
+    log.error("Error removing task: ", error);
+  }
+}
+
+
+function removeVisualTask(taskId) {
+  // 根據 taskId 查找 DOM 中對應的任務元素
+  const taskElement = document.getElementById(taskId);  // 假設每個任務的 id 是一個唯一的 taskId
+  if (taskElement) {
+    taskElement.remove();  // 從頁面中移除該任務
+    log.info(`Task with id ${taskId} removed from the visual interface.`);
+  } else {
+    log.warn(`Task with id ${taskId} not found on the page.`);
+  }
+}
+
+
 function ruleChatBot(request) {
   if (request.startsWith("add task")) {
     let task = request.replace("add task", "").trim();
@@ -220,26 +250,4 @@ function removeFromTaskName(task) {
 }
 
 
-async function removeTask(taskId) {
-  // 使用 Firestore 的 API 刪除任務
-  const taskRef = doc(db, "todos", taskId);  // 根據 taskId 找到對應的 Firestore 文檔
-  try {
-    await deleteDoc(taskRef);  // 刪除文檔
-    log.info(`Task with id ${taskId} has been deleted from Firestore.`);
-  } catch (error) {
-    log.error("Error removing task: ", error);
-  }
-}
-
-
-function removeVisualTask(taskId) {
-  // 根據 taskId 查找 DOM 中對應的任務元素
-  const taskElement = document.getElementById(taskId);  // 假設每個任務的 id 是一個唯一的 taskId
-  if (taskElement) {
-    taskElement.remove();  // 從頁面中移除該任務
-    log.info(`Task with id ${taskId} removed from the visual interface.`);
-  } else {
-    log.warn(`Task with id ${taskId} not found on the page.`);
-  }
-}
 

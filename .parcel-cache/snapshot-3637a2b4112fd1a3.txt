@@ -1,4 +1,4 @@
-22444
+22446
 104C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\term-size\vendor\macos\term-size133846717464142105 0
 66C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\.github133846711136936503 1
 107C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\eslint\lib\config\default-config.js133847094964156554 0
@@ -20,7 +20,7 @@
 136C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase-admin\lib\messaging\messaging-api-request-internal.d.ts133846717345093927 0
 97C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\yargs\locales\pirate.json133846717263397719 0
 124C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\vertexai\dist\esm\firestore\lite\index.d.ts133846717290945520 0
-65C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\app.js133847219770303277 0
+65C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\app.js133847229056902336 0
 120C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\google-gax\build\src\streamingCalls\streaming.js133846717342338347 0
 90C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\yargs\package.json133846717262712605 0
 121C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@parcel\runtime-js\src\helpers\node\css-loader.js133846717473611974 0
@@ -43,7 +43,7 @@
 93C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\jose\dist\browser\jws133846717344953914 1
 81C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\uuid\dist133846717340128050 1
 121C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\auth\cordova\dist\compat\index.perf.d.ts133846717291940726 0
-63C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs133847219948836019 1
+63C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs133847229177014143 1
 109C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase-admin\lib\functions\index.js133846717343149691 0
 124C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\posthtml\node_modules\htmlparser2\lib\Tokenizer.d.ts133846717481995341 0
 99C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\app-check\dist\esm133846717271349240 1
@@ -127,7 +127,7 @@
 87C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\firebase\compat133846717279602856 1
 99C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@tootallnate\once\README.md133846717340483174 0
 77C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\@lmdb133847182027884244 1
-69C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\index.html133847199287755931 0
+69C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\index.html133847225562854346 0
 102C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\html-entities\lib\index.js.map133846717340543165 0
 93C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\uuid\dist\cjs\v1.d.ts133846717343817551 0
 124C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\node_modules\htmlnano\lib\modules\collapseAttributeWhitespace.cjs133846717464707234 0
@@ -22428,6 +22428,8 @@
 77C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\icons\icon-128.png133846710526685559 0
 77C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\icons\icon-512.png133846710526695571 0
 85C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\icon-128.445b138c.png133847099157243383 0
+81C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.01eef0d6.js133847229176847021 0
+85C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.01eef0d6.js.map133847229177009100 0
 81C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.0a97c4a7.js133847138966274641 0
 85C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.0a97c4a7.js.map133847138966509875 0
 82C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.65dce202.css133847099162968615 0
@@ -22437,7 +22439,7 @@
 81C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.a8c8c381.js133847183978918110 0
 85C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.a8c8c381.js.map133847183979111964 0
 85C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.d4ad317a.js.map133847181335739731 0
-74C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.html133847219948413664 0
+74C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\index.html133847229176841807 0
 84C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\manifest.webmanifest133847120836578708 0
 90C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\service-worker.a5fa182b.js133847099162963402 0
 94C:\Users\peito\Documents\0.Web_Local\Trends\To-Do-List-PWA\docs\service-worker.a5fa182b.js.map133847099163113059 0
